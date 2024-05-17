@@ -17,7 +17,12 @@ class MarkovMachine {
   makeChains() {
     let chains = new Map();
 
-    for (let i = 0; i < this.words.length; i += 1) {}
+    for (let i = 0; i < this.words.length; i += 1) {
+      let word = this.words[i];
+      let netWord = this.words[i + 1] || null;
+
+      if (chains.has(word)) chains.get(word).push(nextWord);
+    }
   }
 
   /** return random text from chains */
