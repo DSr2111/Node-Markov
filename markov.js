@@ -15,7 +15,9 @@ class MarkovMachine {
    *  {"the": ["cat", "hat"], "cat": ["in"], "in": ["the"], "hat": [null]} */
 
   makeChains() {
-    // TODO
+    let chains = new Map();
+
+    for (let i = 0; i < this.words.length; i += 1) {}
   }
 
   /** return random text from chains */
