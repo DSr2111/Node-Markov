@@ -28,7 +28,7 @@ class MarkovMachine {
     this.chains = chains;
   }
 
-  /** random array choice */
+  /** random array choice w */
 
   static choice(ar) {
     return ar[Math.floor(Math.random() * ar.length)];
@@ -48,3 +48,7 @@ class MarkovMachine {
     return out.join(" ");
   }
 }
+
+module.exports = {
+  MarkovMachine,
+};
