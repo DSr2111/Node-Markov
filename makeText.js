@@ -29,3 +29,14 @@ async function makeURLText(url) {
   }
   generateText(res.data);
 }
+
+let [method, path] = process.argv.slice(2);
+
+if (method == "file") {
+  makeText(path);
+} else if (method == "url") {
+  makeURLText(path);
+} else {
+  console.error(`Unknown method ${method}`);
+  process.exit(1);
+}
