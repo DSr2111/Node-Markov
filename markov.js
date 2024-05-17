@@ -37,6 +37,8 @@ class MarkovMachine {
   /** return random text from chains */
 
   makeText(numWords = 100) {
-    // TODO
+    let keys = Array.from(this.chains.keys());
+    let key = MarkovMachine.choice(keys);
+    let out = [];
   }
 }
