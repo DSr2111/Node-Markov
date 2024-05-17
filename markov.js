@@ -28,6 +28,12 @@ class MarkovMachine {
     this.chains = chains;
   }
 
+  /** random array choice */
+
+  static choice(ar) {
+    return ar[Math.floor(Math.random() * ar.length)];
+  }
+
   /** return random text from chains */
 
   makeText(numWords = 100) {
