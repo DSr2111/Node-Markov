@@ -18,3 +18,14 @@ function makeText(path) {
     }
   });
 }
+
+async function makeURLText(url) {
+  let res;
+  try {
+    res = await axios.get(url);
+  } catch (err) {
+    console.error(`Cannot read URL: ${url}: ${err}`);
+    process.exit(1);
+  }
+  generateText(res.data);
+}
